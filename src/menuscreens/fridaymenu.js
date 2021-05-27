@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import {
     View,
     StyleSheet,
@@ -6,11 +7,15 @@ import {
     ImageBackground,
     Text,
     CheckBox,
-    Alert
+    Alert,
+    Image
 } from 'react-native';
 
 /** Components */
 import Buttons from '../components/Button';
+
+/** image */
+import fridayImage from '../images/friday.png'
 
 export default function fridaymenu() {
 
@@ -20,13 +25,13 @@ export default function fridaymenu() {
         dish3: false,
     });
 
-    const handleChange = (props) => () => {
-        setSelection({ ...isSelected, [props]: props })
+    const handleChange = (props) => (Boolean) => {
+        setSelection({ ...isSelected, [props]: Boolean })
     }
 
     const alertOrder = () => {
 
-        if (isSelected.dish1 == false || isSelected.dish2 == false || isSelected.dish3 == false) {
+        if (isSelected.dish1 === true || isSelected.dish2 === true || isSelected.dish3 === true) {
             Alert.alert(
                 "Order Successful",
                 "Order was scheduled for delivery",
@@ -47,10 +52,11 @@ export default function fridaymenu() {
             );
         }
     }
-
+    
     return (
         <ImageBackground style={styles.backgroundcontainer}>
             <ScrollView>
+                <Image source={fridayImage} style={styles.image} />
                 <View style={styles.container}>
                     <View style={styles.checkboxContainer}>
                         <CheckBox
@@ -97,9 +103,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         alignItems: 'center',
     },
-    container: {
-        marginTop: 200
-    },
     checkboxContainer: {
         flexDirection: "row",
         marginBottom: 20,
@@ -109,6 +112,12 @@ const styles = StyleSheet.create({
     },
     label: {
         margin: 8,
+    },
+    image: {
+        height: 300,
+        width: '100%',
+        marginBottom: 20,
+        marginTop: 20
     },
 });
 

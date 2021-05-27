@@ -6,11 +6,16 @@ import {
     ImageBackground,
     Text,
     CheckBox,
-    Alert
+    Alert,
+    Image
 } from 'react-native';
 
 /** Components */
 import Buttons from '../components/Button';
+
+/** image */
+import mondayImage from '../images/monday.png'
+
 
 export default function mondaymenu() {
 
@@ -51,6 +56,7 @@ export default function mondaymenu() {
     return (
         <ImageBackground style={styles.backgroundcontainer}>
             <ScrollView>
+                <Image source={mondayImage} style={styles.image} />
                 <View style={styles.container}>
                     <View style={styles.checkboxContainer}>
                         <CheckBox
@@ -97,9 +103,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         alignItems: 'center',
     },
-    container: {
-        marginTop: 200
-    },
     checkboxContainer: {
         flexDirection: "row",
         marginBottom: 20,
@@ -109,6 +112,12 @@ const styles = StyleSheet.create({
     },
     label: {
         margin: 8,
+    },
+    image: {
+        height: 300,
+        width: '100%',
+        marginBottom: 20,
+        marginTop: 20
     },
 });
 

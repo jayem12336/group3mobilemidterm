@@ -11,12 +11,12 @@ import {
 import Buttons from '../components/Button';
 import advertisement from '../images/homeimage.jpg'
 
-export default function Home( {navigation} ) {
+export default function Home({ navigation }) {
     return (
         <ImageBackground style={styles.backgroundcontainer}>
-            <ScrollView>
             <Image source={advertisement} style={styles.image} />
-            <View style={styles.btnContainer}>
+            <ScrollView>
+                <View style={styles.btnContainer}>
                     <Buttons onPress={() => navigation.navigate("Monday Menu")}>Monday</Buttons>
                 </View>
                 <View style={styles.btnContainer}>
