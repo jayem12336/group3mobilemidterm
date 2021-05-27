@@ -93,11 +93,6 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignContent: "center"
     },
-    image: {
-        height: 370,
-        width: '100%',
-        marginBottom: 20
-    },
     btnContainer: {
         marginBottom: 20,
         alignItems: 'center',

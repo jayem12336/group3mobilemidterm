@@ -87,16 +87,11 @@ export default function mondaymenu() {
 
 const styles = StyleSheet.create({
     backgroundcontainer: {
-        flex: 1,
         backgroundColor: '#76cde0',
+        flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        alignContent: "center"
-    },
-    image: {
-        height: 370,
-        width: '100%',
-        marginBottom: 20
+        alignContent: "center",
     },
     btnContainer: {
         marginBottom: 20,
