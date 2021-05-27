@@ -20,13 +20,13 @@ export default function mondaymenu() {
         dish3: false,
     });
 
-    const handleChange = (props) => () => {
-        setSelection({ ...isSelected, [props]: props })
+    const handleChange = (props) => (Boolean) => {
+        setSelection({ ...isSelected, [props]: Boolean })
     }
     
     const alertOrder = () => {
 
-        if(isSelected.dish1 == false || isSelected.dish2 == false || isSelected.dish3 == false) {
+        if(isSelected.dish1 === true || isSelected.dish2 === true || isSelected.dish3 === true) {
             Alert.alert(
                 "Order Successful",
                 "Order was scheduled for delivery",
