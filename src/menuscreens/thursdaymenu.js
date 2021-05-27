@@ -23,10 +23,10 @@ export default function thursdaymenu() {
     const handleChange = (props) => () => {
         setSelection({ ...isSelected, [props]: props })
     }
-    
+
     const alertOrder = () => {
 
-        if(isSelected.dish1 == false || isSelected.dish2 == false || isSelected.dish3 == false) {
+        if (isSelected.dish1 == false || isSelected.dish2 == false || isSelected.dish3 == false) {
             Alert.alert(
                 "Order Successful",
                 "Order was scheduled for delivery",
@@ -96,10 +96,9 @@ const styles = StyleSheet.create({
     btnContainer: {
         marginBottom: 20,
         alignItems: 'center',
-    }, container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
+    },
+    container: {
+        marginTop: 200
     },
     checkboxContainer: {
         flexDirection: "row",

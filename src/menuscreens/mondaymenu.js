@@ -23,10 +23,10 @@ export default function mondaymenu() {
     const handleChange = (props) => (Boolean) => {
         setSelection({ ...isSelected, [props]: Boolean })
     }
-    
+
     const alertOrder = () => {
 
-        if(isSelected.dish1 === true || isSelected.dish2 === true || isSelected.dish3 === true) {
+        if (isSelected.dish1 === true || isSelected.dish2 === true || isSelected.dish3 === true) {
             Alert.alert(
                 "Order Successful",
                 "Order was scheduled for delivery",
@@ -96,10 +96,9 @@ const styles = StyleSheet.create({
     btnContainer: {
         marginBottom: 20,
         alignItems: 'center',
-    }, container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
+    },
+    container: {
+        marginTop: 200
     },
     checkboxContainer: {
         flexDirection: "row",
