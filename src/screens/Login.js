@@ -9,7 +9,8 @@ import {
     ImageBackground,
     Alert,
     ScrollView,
-    TouchableOpacity
+    TouchableOpacity,
+    Image
 } from 'react-native';
 
 /** Components */
@@ -20,6 +21,9 @@ import TextField from '../components/Textinput';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Link } from '@react-navigation/native';
+
+/** Image */
+import Logo from '../images/Logo.png'
 
 export default function Login({ navigation }) {
     const [payload, setPayLoad] = useState({
@@ -89,9 +93,8 @@ export default function Login({ navigation }) {
                 <View style={styles.loginContainer}>
                     <View style={styles.logoContainer}>
                         <View style={styles.logo}>
-                            <Ionicons name="fast-food" size={100} color="black" />
+                            <Image source={Logo} style={styles.logo}/>
                         </View>
-                        <Text style={styles.logoText}>Cook Eat</Text>
                     </View>
                     <View style={styles.textField}>
                         <TextField
@@ -159,8 +162,8 @@ const styles = StyleSheet.create({
         width: 120,
         height: 120,
         borderRadius: 60,
-        marginTop: 80,
-        marginLeft: 30
+        marginTop: 50,
+        marginBottom: 70
     },
     logoContainer: {
         alignItems: 'center',
