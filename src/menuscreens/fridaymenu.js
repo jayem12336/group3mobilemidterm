@@ -12,7 +12,7 @@ import {
 /** Components */
 import Buttons from '../components/Button';
 
-export default function mondaymenu() {
+export default function fridaymenu() {
 
     const [isSelected, setSelection] = useState({
         dish1: false,
@@ -58,7 +58,7 @@ export default function mondaymenu() {
                             onValueChange={handleChange('dish1')}
                             style={styles.checkbox}
                         />
-                        <Text style={styles.label}>Chicken Tinola </Text>
+                        <Text style={styles.label}> Monggo q/ inihaw na Liempo </Text>
                     </View>
                     <View style={styles.checkboxContainer}>
                         <CheckBox
@@ -66,7 +66,7 @@ export default function mondaymenu() {
                             onValueChange={handleChange('dish2')}
                             style={styles.checkbox}
                         />
-                        <Text style={styles.label}>Paksiw na Bangus</Text>
+                        <Text style={styles.label}> Pork Steak</Text>
                     </View>
                     <View style={styles.checkboxContainer}>
                         <CheckBox
@@ -74,7 +74,7 @@ export default function mondaymenu() {
                             onValueChange={handleChange('dish3')}
                             style={styles.checkbox}
                         />
-                        <Text style={styles.label}>Nilagang Baka</Text>
+                        <Text style={styles.label}> Menudo </Text>
                     </View>
                     <View style={styles.btnContainer}>
                         <Buttons onPress={alertOrder}> Place order </Buttons>

@@ -17,19 +17,19 @@ export default function Home( {navigation} ) {
             <ScrollView>
             <Image source={advertisement} style={styles.image} />
             <View style={styles.btnContainer}>
-                    <Buttons onPress={() => navigation.navigate("Mondaymenu")}>Monday</Buttons>
+                    <Buttons onPress={() => navigation.navigate("Monday Menu")}>Monday</Buttons>
                 </View>
                 <View style={styles.btnContainer}>
-                    <Buttons>Tuesday</Buttons>
+                    <Buttons onPress={() => navigation.navigate("Tuesday Menu")}>Tuesday</Buttons>
                 </View>
                 <View style={styles.btnContainer}>
-                    <Buttons>Wednesday</Buttons>
+                    <Buttons onPress={() => navigation.navigate("Wednesday Menu")}>Wednesday</Buttons>
                 </View>
                 <View style={styles.btnContainer}>
-                    <Buttons>Thursday</Buttons>
+                    <Buttons onPress={() => navigation.navigate("Thursday Menu")}>Thursday</Buttons>
                 </View>
                 <View style={styles.btnContainer}>
-                    <Buttons>Friday</Buttons>
+                    <Buttons onPress={() => navigation.navigate("Friday Menu")}>Friday</Buttons>
                 </View>
             </ScrollView>
         </ImageBackground>

@@ -16,7 +16,13 @@ import { Entypo } from '@expo/vector-icons';
 import Login from '../screens/Login'
 import Signup from '../screens/Signup'
 import Home from '../screens/Home';
+
+/** Menu Screens */
 import Mondaymenu from '../menuscreens/mondaymenu'
+import Tuesdaymenu from '../menuscreens/tuesdaymenu'
+import Wednesdaymenu from '../menuscreens/wednesdaymenu'
+import Thursdaymenu from '../menuscreens/thursdaymenu'
+import Fridaymenu from '../menuscreens/fridaymenu'
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -83,8 +89,28 @@ export default function Navigation() {
                     options={{ headerShown: false }}
                 />
                 <Stack.Screen
-                    name="Mondaymenu"
+                    name="Monday Menu"
                     component={Mondaymenu}
+                    options={{ headerShown: true }}
+                />
+                <Stack.Screen
+                    name="Tuesday Menu"
+                    component={Tuesdaymenu}
+                    options={{ headerShown: true }}
+                />
+                <Stack.Screen
+                    name="Wednesday Menu"
+                    component={Wednesdaymenu}
+                    options={{ headerShown: true }}
+                />
+                <Stack.Screen
+                    name="Thursday Menu"
+                    component={Thursdaymenu}
+                    options={{ headerShown: true }}
+                />
+                <Stack.Screen
+                    name="Friday Menu"
+                    component={Fridaymenu}
                     options={{ headerShown: true }}
                 />
             </Stack.Navigator>
